@@ -1,0 +1,148 @@
+<h2>
+Hello Events Tutorial
+</h2>
+<p>
+    The following is a tutorial introduction to the Prggmr API, this will provide a introduction into
+    subscribing, publishing and using events with Prggmr.
+</p>
+<p>
+    Before we begin with a in-depth event driven app, let's take a look at the all to common Hello World written into Prggmr's API.
+</p>
+<p>
+    If you have not yet downloaded and installed the Prggmr Framework and are the type that
+    prefers to write the code instead of just reading it, it is recommended you do so now, you may follow this
+    <a href="pages/download-install.html" rel="guide">link</a> for the guide.</p>
+<pre class="prettyprint linenums">
+// Subscribe to the "hello_world" event.
+prggmr::listen('hello_world', function(){
+   echo 'Hello World!'; 
+});
+
+// Publish the "hello_world" event.
+prggmr::trigger('hello_world');
+</pre>
+<p>
+    <a href="#" onclick="loadExample('Hello World!', 'examples/hello_events.php'); return false;">Run this example!</a>
+</p>
+<h2>
+    The Student Tracker
+</h2>
+<p>
+    Now before explaining the above code, lets review a little more involved application to really get your feet wet!
+</p>
+<p>
+    The example code below represents a student tracking object which records the time a student arrives to class,
+    sends them a welcome message based on the time they arrive and dispatches a tardy notice to any student that
+    fails to arrive within the allowed time, analyze the code, run the example and welcome yourself to the Prggmr API.
+</p>
+<pre class="prettyprint linenums">
+
+class Student_Tracker extends prggmr\Event {
+    
+    const CLASS_FULL = 200;
+    
+    /**
+     * The students that have arrived in class.
+     *
+     * @var  array
+     */
+    public $_arrivals = array();
+    
+    /**
+     * The students roster.
+     *
+     * @var  array
+     */
+    public $_students = array();
+    
+    /**
+     * Responses given when a student arrives.
+     *
+     * @var  array
+     */
+    public $_responses = array(
+        'early'  =>  '%s your early, Welcome to class!', 
+        'ontime' =>  'Hello %s! right on time for class!', 
+        'late'   =>  'Well hello %s nice of you to show!',
+        'tardy'  =>  'A tardy notice has been sent to %s!'
+    );
+}
+
+// Create a subscription to the student_arrive event
+\prggmr::listen('student_arrived', function($event, $student, $time){
+    $arrivee = $event->_students[$student];
+    $event->_arrivals[] = array(
+        $arrivee,
+        $time
+    );
+    if ($time <= 0) {
+        echo sprintf($event->_responses['early'], $arrivee)."";
+    } elseif ($time <= 59) {
+        echo sprintf($event->_responses['ontime'], $arrivee)."";
+    } else {
+        echo sprintf($event->_responses['late'], $arrivee)."";
+    }
+    unset($event->_students[$student]);
+});
+
+// Create another subscription for when all students arrive to class
+\prggmr::listen('all_students_arrived', function($event){
+    // Set the event to indicate all students are now in class
+    $event->setState(Student_Tracker::CLASS_FULL);
+    echo 'Hello Everyone, Lets begin class!'; 
+});
+
+// Create a subscription when the classroom will no longer allow students.
+\prggmr::listen('classroom_closed', function($event){
+    // We have tardy students .... uh oh
+    // We also rely on the state of the event rather than the count
+    // of students that still exist on the roster.
+    if (Student_Tracker::CLASS_FULL !== $event->getState()) {
+        foreach ($event->_students as $_key => $_student) {
+            echo sprintf($event->_responses['tardy'], $_student)."";   
+        }
+    }
+
+});
+
+// Init our event object
+$student_tracker = new Student_Tracker();
+
+// Create a range of students to loop
+$students = range(1, 20);
+$count = -10;
+
+// Set our roster
+$student_tracker->_students = $students;
+
+// Create a loop that will run 80 times
+// 10 count for students coming in early
+// 60 count for students on time
+// 10 count fot students late
+while ($count != 70) {
+    $rand = rand(0, 1000);
+    
+    if ($rand >= 750) {
+        $student = array_rand($students, 1);
+        // Publish this student arrived to class
+        $student_tracker->student_arrived(array(
+            $student,
+            $count
+        ));
+        unset($students[$student]);
+        if (count($students) == 0) {
+            // Publish that all students have arrived to class!
+            $student_tracker->all_students_arrived();
+            break;
+        }
+    }
+    $count++;
+    // Sleep and print results
+}
+
+// Publish the classroom has closed
+$student_tracker->classroom_closed();
+</pre>
+<p>
+    <a href="#" onclick="loadExample('Student Tracker Tutorial', 'examples/student_tracker.php'); return false;">Run this example!</a>
+</p>

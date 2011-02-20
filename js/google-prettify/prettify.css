@@ -1,0 +1,101 @@
+/*/* Pretty printing styles. Used with prettify.js. */*/
+/**/
+/*.str { color: #868e7d; font-weight: bold; }*/
+/*.kwd { color: #7490aa;  font-weight: bold;}*/
+/*.com { color: #565D60;  font-weight: bold;}*/
+/*.typ { color: #e8e8e8;  font-weight: bold;}*/
+/*.lit { color: #aa7474; font-weight: bold; }*/
+/*.pun { color: #cbd389; font-weight: bold;}*/
+/*.pln { color: #7490aa;*/
+/*    font-weight: bold; }*/
+/*.tag { color: #008; font-weight: bold; }*/
+/*.atn { color: #606; font-weight: bold; }*/
+/*.atv { color: #080; font-weight: bold; }*/
+/*.dec { color: #606; font-weight: bold; }*/
+/*pre.prettyprint { line-height: 13px; text-shadow: none; padding: 10px; width: 100%; border: 1px solid #2B2D2D; background: #2B2D2D; margin: 10px 0; font-size: 12px; font-family: Consolas, Helvetica, Courier-New; }*/
+/**/
+/*/* Specify class=linenums on a pre to get line numbering */*/
+/*ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */*/
+/*li.L0,*/
+/*li.L1,*/
+/*li.L2,*/
+/*li.L3,*/
+/*li.L5,*/
+/*li.L6,*/
+/*li.L7,*/
+/*li.L8 { list-style-type: none }*/
+/*/* Alternate shading for lines */*/
+/*li.L1,*/
+/*li.L3,*/
+/*li.L5,*/
+/*li.L7,*/
+/*li.L9 { background: #eee }*/
+/**/
+/*@media print {*/
+/*  .str { color: #2B2D2D; font-weight: bold; }*/
+/*  .kwd { color: #006; font-weight: bold; }*/
+/*  .com { color: #600; font-style: italic; }*/
+/*  .typ { color: #404; font-weight: bold; }*/
+/*  .lit { color: #044; }*/
+/*  .pun { color: #440; }*/
+/*  .pln { color: #000; }*/
+/*  .tag { color: #006; font-weight: bold; }*/
+/*  .atn { color: #404; }*/
+/*  .atv { color: #060; }*/
+/*}*/
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.str { color: #080; }
+.kwd { color: #008; }
+.com { color: #800; }
+.typ { color: #606; }
+.lit { color: #066; }
+.pun, .opn, .clo { color: #660; }
+.pln { color: #000; }
+.tag { color: #008; }
+.atn { color: #606; }
+.atv { color: #080; }
+.dec { color: #606; }
+
+/* Use higher contrast and font-styling for printable form. */
+@media print {
+  .str { color: #060; }
+  .kwd { color: #006; font-weight: bold; }
+  .com { color: #600; font-style: italic; }
+  .typ { color: #404; font-weight: bold; }
+  .lit { color: #044; }
+  .pun, .opn, .clo { color: #440; }
+  .pln { color: #000; }
+  .tag { color: #006; font-weight: bold; }
+  .atn { color: #404; }
+  .atv { color: #060; }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { background-color:#FAFAFA;
+border:1px solid #CCCCCC;
+line-height: 15px;
+margin:0 0 1em 1em;
+overflow:auto;
+padding:10px;
+font-size: 13px;
+font-family: monospace; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; list-style: decimal; } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { /*list-style-type: none*/ line-height: 14px; }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { /*background: #eee*/ line-height: 14px; }
+

@@ -1,0 +1,182 @@
+@import url('reset.css');
+
+section,aside{display: block;position:relative;}
+
+body,html { background:#fff;}
+
+div#body {
+    width: 100%;
+    margin: 0px 0px;
+}
+
+a { /*font-weight: bold;*/ font-style: italic; color: #4A5B6B; }
+
+section#content { width: 100%; margin: 25px 0 0 0; color: #333333; }
+
+#logo {
+    font-family: 'Droid Sans', Arial, serif;
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    background:#2b3138;
+    height: 45px;
+    border-bottom: 2px solid #0A0A0A;
+    /*width:260px;*/
+}
+
+#logo aside {
+    font-size: 25px;
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 3px 3px 5px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background: #363c42;
+    /*width: 75px;*/
+    height: 18px;
+    float: left;
+    text-align: center;
+}
+
+#logo p {
+    clear: both;
+    position: absolute;
+    top: 32px;
+    font-size: 15px;
+}
+
+#logo h1 {
+    float: left;
+    margin-top: 2px;
+    margin-left: 4px;
+    text-shadow: #0f1319 3px 2px 2px;
+    font-size: 27px;
+    position: relative;
+}
+
+#logo h1 span a {
+    display: block;
+    position: absolute;
+    right: 5px;
+    bottom: -4px;
+    color: #f9bbbb;
+    font-size: 9px;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+#logo h1 span span { font-family: Arial, sans-serif; position: relative; }
+
+section#content p, #example-body p, #content ul li {
+    clear: both;
+    font-size: 13px;
+    /*text-shadow: #0f1319 3px 2px 2px;*/
+    margin: 14px 0;
+    /*color: #fff;*/
+    line-height: 15px;
+    /*text-align: center;*/
+    font-family: Arial, sans-serif;
+}
+
+section#content ul {
+    list-style: lower-roman;
+}
+
+section#content ul li {
+   float: none;
+   margin: 10px 30px;
+}
+
+.clear { clear: both; }
+
+
+div#left {
+    width: 65%;
+    margin-left: 5%;
+    float: left;
+    border-left: 1px solid #888;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+div#right {
+    width: 15%;
+    float: left;
+    margin-left: 1%;
+}
+
+div#right h2, div#left h2, #example-body h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #888;
+    clear: both;
+    padding: 10px 0;
+    line-height: 25px;
+}
+
+div#right ul {
+    margin: 10px 0;
+    list-style: none;
+}
+
+div#left ul {
+    margin: 10px 0;
+    list-style: none;
+}
+
+div#left ul li h3 {
+    margin-left: -30px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+div#right ul li {
+    padding: 5px 0px;
+    margin: 0 10px;
+}
+
+div#right ul li h3 {
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #888;
+    padding-bottom: 5px;
+}
+
+div#right ul li a {
+    width: 95%;
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+div#left p, #example-body p { line-height: 19px; }
+
+sup,sub { font-size: 7px; }
+
+#example-background {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.3;
+    display: none;
+}
+
+#example-body {
+    position: fixed;
+	top: 10%;
+	left: 25%;
+	width: 50%;
+	height: auto;
+	padding: 16px;
+	border: 2px solid #888;
+	background-color: white;
+	z-index: 2;
+	overflow: auto;
+    display: none;
+}
