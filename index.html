@@ -8,6 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin' rel='stylesheet' type='text/css'>
     <link href='css/stylesheet.css' rel='stylesheet' type='text/css' />
+    <link rel="icon" href="images/favicon.png" />
     <link href="js/google-prettify/prettify.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/google-prettify/prettify.js"></script>
@@ -106,6 +107,16 @@
                     $('#example-background').fadeOut();
                 });
             });
+            var nav = $('div#right');
+            $(window).scroll(function(){
+                    nav.stop();
+                    if ($('div#body').height() <= $(window).scrollTop() - 100) return true;
+                    if ($(window).scrollTop() === 0 || $(window).scrollTop() <= 75) {
+                        nav.animate({"marginTop": ($(window).scrollTop() + 10) + "px"}, 1000 );
+                    } else {
+                        nav.animate({"marginTop": ($(window).scrollTop() - 100) + "px"}, 1000 );
+                    }
+             });
         });
         
     </script>
@@ -114,12 +125,6 @@
     <div id="example-background">
     </div>
     <div id="example-body">
-        <h2>
-            Example Title
-        </h2>
-        <p id="example-content">
-            
-        </p>
     </div>
     <div id="body">
         <section id="logo">
@@ -171,7 +176,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="pages/api_introduction.html" rel="guide">
                             Prggmr API Introduction
                         </a>
                     </li>
