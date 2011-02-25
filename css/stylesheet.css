@@ -19,9 +19,9 @@ section#content { width: 100%; margin: 25px 0 0 0; color: #333333; }
     color: #fff;
     font-weight: bold;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px 10px;
     background:#2b3138;
-    height: 45px;
+    height: 30px;
     border-bottom: 2px solid #0A0A0A;
     /*width:260px;*/
 }
@@ -179,4 +179,65 @@ sup,sub { font-size: 7px; }
 	z-index: 2;
 	overflow: auto;
     display: none;
+}
+
+div.method {
+    font-size: 16px;
+    /*border-bottom: 1px solid #888;*/
+    clear: both;
+    padding: 10px;
+    line-height: 25px;
+    font-weight: bold;
+    /*letter-spacing: -1px;*/
+    background-color: #E3ECF2;
+    border: 1px dashed #AEB8BF;
+    margin: 15px 0;
+}
+
+div.method p {
+    display: block;
+    clear: both;
+    font-size: 14px;
+    padding: 5px 15px;
+    line-height: 17px;
+    font-weight: normal;
+}
+
+div.method em {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+div.method ul { list-style: disc; margin: 10px; }
+
+div.method ul li { padding: 10px; background: #efefef; border: 1px dashed #AEB8BF; font-weight: normal; }
+
+div.method ul li div.element {
+    clear: both;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+div.method ul li div.element span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #41494F;
+    clear: none;
+    font-style: italic;
+    padding: 0px;
+    line-height: inherit;
+}
+
+div.method ul li
+
+.note {
+    /*background: #D1BABA;*/
+    border: 1px dashed #CC6363;
+    background: #EDCBCB;
+    padding: 10px;
+    margin: 10px 0;
+    font-style: italic;
+    font-weight: bold;
 }

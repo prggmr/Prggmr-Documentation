@@ -26,7 +26,7 @@
         //  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         //  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         //})();
-        
+
         function url(param) {
             param = param.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
             var regexS = "[\\?&]"+param+"=([^&#]*)";
@@ -38,16 +38,18 @@
                 return results[1];
             }
         }
-        
+
         function load(content) {
             $('div#left').fadeOut(function(){
-                $('div#left').html(content);
-                $('div#left').fadeIn();
-                parseLinks();
-                prettyPrint();
+                $('body, html').animate({scrollTop: 0}, 750, function(){
+                    $('div#left').html(content);
+                    $('div#left').fadeIn();
+                    parseLinks();
+                    prettyPrint();
+                });
             });
         }
-        
+
         function parseLinks() {
             $('a[rel=guide]').each(function(){
                 var parsed = $(this).attr('parsed');
@@ -69,7 +71,7 @@
                 }
             });
         };
-        
+
         function loadExample(title, page) {
             $('#example-background').fadeIn(function(){
                 var body = $('#example-body');
@@ -88,7 +90,7 @@
                 });
             });
         }
-        
+
         $().ready(function(){
             parseLinks();
             if (null !== url('page')) {
@@ -114,11 +116,11 @@
                     if ($(window).scrollTop() === 0 || $(window).scrollTop() <= 75) {
                         nav.animate({"marginTop": ($(window).scrollTop() + 10) + "px"}, 1000 );
                     } else {
-                        nav.animate({"marginTop": ($(window).scrollTop() - 100) + "px"}, 1000 );
+                        nav.animate({"marginTop": ($(window).scrollTop() - 70) + "px"}, 1000 );
                     }
              });
         });
-        
+
     </script>
 </head>
 <body onload="prettyPrint();">
