@@ -194,6 +194,10 @@ div.method {
     margin: 15px 0;
 }
 
+div.method a {
+    color: #333333;
+}
+
 div.method p {
     display: block;
     clear: both;
@@ -240,4 +244,11 @@ div.method ul li
     margin: 10px 0;
     font-style: italic;
     font-weight: bold;
+}
+
+div.method span.default {
+    clear: both;
+    margin: -10px 0px 10px;
+    display: block;
+    color: #566169;
 }

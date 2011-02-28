@@ -162,9 +162,10 @@ $student_tracker->classroom_closed();
     In the first example we made use of two of Prggmr's available publishing and subscribing methods, trigger and listen.
 </p>
 <div class="method">
-    prggmr::listen(<em>$event, \Closure $function [, array $options = array()]</em>)
+    <a href="pages/api/prggmr.html" rel="guide">prggmr</a>::<a href="pages/api/prggmr/listen.html" rel="guide">listen</a>(<em>$event, \Closure $function [, array $options = array()]</em>)
     <p>
-        Statically called global subscriber, registers a new event to be bubbled when a notice is received from the event engine.
+        Statically called global subscriber, registers a new event to be bubbled when a notice is received from the event engine. You may read more about the prggmr::listen method on the following
+        <a href="pages/api/prggmr/listen.html" rel="guide">page</a>.
     </p>
     <ul>
         <li>
@@ -181,19 +182,18 @@ $student_tracker->classroom_closed();
             <ul>
                 <li>
                     <div class="element">shift <span>boolean</span></div>
-                    <span>default: false</span>
+                    <span class="default">default: false</span>
                     Shifts this event to the beginning of the event queue causing it to trigger before any
                     previously added subscribers.
                 </li>
                 <li>
                     <div class="element">namespace <span>string</span></div>
-                    <span>default: \prggmr::GLOBAL_DEFAULT</span>
-                    Shifts this event to the beginning of the event queue causing it to trigger before any
-                    previously added subscribers.
+                    <span class="default">default: \prggmr::GLOBAL_DEFAULT</span>
+                    Namespace to attach this subscriber.
                 </li>
                 <li>
                     <div class="element">name <span>string</span></div>
-                    <span>default: null</span>
+                    <span class="default">default: null</span>
                     Name to give this subscriber.
                     <div class="note">
                         It is recommended to leave this option blank unless you are sure
@@ -202,7 +202,7 @@ $student_tracker->classroom_closed();
                 </li>
                 <li>
                     <div class="element">force <span>boolean</span></div>
-                    <span>default: false</span>
+                    <span class="default">default: false</span>
                     Force the addition of this subscriber if a name collision exists.
                     <div class="note">
                         This option is ignored unless "name" is given.
