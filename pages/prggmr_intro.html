@@ -29,15 +29,15 @@
     </li>
     <li>
         <h3>
-            Lightweight and Portable
+            Lightweight, Portable & Ready Out of the Box
         </h3>
         <p>
-            The code base of Prggmr weighs in just under <em>80k</em>, and can be included into existing applications
-            using only 2 lines of code, with no configuration needed.
+            The code base of Prggmr weighs in just under <em>80k</em>, can be included into existing applications
+            using only 2 lines of code, and requires no configuration.
             <pre class="prettyprint">
 require 'lib/prggmr.php';
 
-\prggmr::initalize();
+\prggmr::initialize();
             </pre>
         </p>
     </li>
@@ -57,7 +57,22 @@ require 'lib/prggmr.php';
         <p>
             Prggmr has been developed to be a robust, scalable solution for seasoned veterans, while
             keeping itself simple and intuitive for the noobs.
+        </p>
+        <p>
+            Take a look at the below example, demonstrating the publishing and subscription methods.
+        </p>
+        <pre class="prettyprint">
+// Subscribe to an event
+\prggmr::listen('event_name', function($event, $name){
+    // Action to take
+    echo $name;
+});
 
+// Publish an event
+\prggmr::trigger('event_name', array('nick'));
+        </pre>
+        <p>
+            <a href="#" onclick="loadExample('Prggmr Introduction', 'examples/prggmr_intro.php'); return false;">Run this example!</a>
         </p>
     </li>
     <li>
@@ -65,7 +80,7 @@ require 'lib/prggmr.php';
             Test Driven Development
         </h3>
         <p>
-            The entire code base of Prggmr has been developed with great disclipline with 100% of its code tested
+            The entire code base of Prggmr has been developed with great discipline with 100% of its code base tested
             to ensure its stability.
         </p>
     </li>
@@ -75,7 +90,6 @@ require 'lib/prggmr.php';
 </h2>
 <p>
     The Prggmr framework is the fruit of 3 years of continuous development, researching, mistakes and enlightenment into
-    software architectural patterns. The Prggmr framework has been a long-term goal that is finally achieved and I hope
+    software architectural patterns. Prggmr has been a long-term goal that is finally achieved and I hope
     that everyone enjoys the framework as much as I enjoyed developing it.
-
 </p>

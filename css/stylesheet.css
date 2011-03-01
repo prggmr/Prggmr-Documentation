@@ -82,6 +82,17 @@ section#content p, #example-body p, #content ul li {
     font-family: Arial, sans-serif;
 }
 
+
+.search {
+    padding: 3px;
+    width: 100%;
+    font-size: 11px;
+    margin: 5px 0;
+    color: #333333;
+    border: 1px solid;
+    border-color: #888888 #EFEFEF #EFEFEF #888888;
+}
+
 section#content ul {
     list-style: lower-roman;
 }
@@ -91,12 +102,16 @@ section#content ul li {
    margin: 10px 30px;
 }
 
+section#content ul li ul li {
+    background: #fff;
+}
+
 .clear { clear: both; }
 
 
 div#left {
-    width: 65%;
-    margin-left: 5%;
+    width: 69%;
+    margin-left: 1%;
     float: left;
     border-left: 1px solid #888;
     padding-left: 20px;
@@ -104,7 +119,7 @@ div#left {
 }
 
 div#right {
-    width: 15%;
+    width: 180px;
     float: left;
     margin-left: 1%;
 }
@@ -179,6 +194,19 @@ sup,sub { font-size: 7px; }
 	z-index: 2;
 	overflow: auto;
     display: none;
+}
+
+#example-body #close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#example-body #close-button a {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    padding: 3px 5px;
 }
 
 div.method {
