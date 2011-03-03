@@ -4,33 +4,44 @@
 @link hello-events-tutorial
 @category Prggmr Library
 ]
---><h2>
-Hello Events Tutorial
+-->
+<h2>
+Your First Prggmr Event!
 </h2>
-<p>
-    The following is a tutorial introduction to the Prggmr API, this will provide a introduction into
+<!--<p>
+    The following is a simple tutorial introduction to the Prggmr API, this will provide a introduction into
     subscribing, publishing and using events with Prggmr.
 </p>
 <p>
     Before we begin with a in-depth event driven app, let's take a look at the all to common Hello World written into Prggmr's API.
+</p>-->
+<p>
+    Well ... let's write some code now shall we?
 </p>
 <p>
-    If you have not yet downloaded and installed the Prggmr Framework and are the type that
-    prefers to write the code instead of just reading it, it is recommended you do so now, you may follow this
-    <a href="pages/download_install.html" rel="guide">link</a> for the guide.</p>
-<pre class="prettyprint linenums">
-// Subscribe to the "hello_world" event.
-prggmr::listen('hello_world', function(){
-   echo 'Hello World!';
-});
-
-// Publish the "hello_world" event.
-prggmr::trigger('hello_world');
-</pre>
-<p>
-    <a href="#" onclick="loadExample('Hello World!', 'examples/hello_events.php'); return false;">Run this example!</a>
+    If you have not yet downloaded and installed the Prggmr Framework it is recommended you do so now, you may follow this
+    <a href="pages/download_install.html" rel="guide">link</a> for links and instructions.
 </p>
 <h2>
+    hello world
+</h2>
+<br />
+<pre class="prettyprint linenums">
+// Subscribe to the "hello world" event.
+prggmr::listen('hello world', function(){
+   echo 'hello world';
+});
+
+// Publish the "hello world" event.
+prggmr::trigger('hello world');
+</pre>
+<p>
+    <a href="#" onclick="loadExample('hello world', 'examples/hello_events.php'); return false;">Run this example!</a>
+</p>
+<p>
+    Simple isnt it :) once you've satisified your hello world geekness you can move on to the <a href="pages/api_introduction.html" rel="guide">API Introduction</a>.
+</p>
+<!--<h2>
     Breaking down the code!
 </h2>
 <p>
@@ -141,7 +152,7 @@ prggmr::trigger('hello_world');
             </ul>
         </li>
     </ul>
-</div>
+</div>-->
 <p>
 
 </p>

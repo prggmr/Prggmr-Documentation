@@ -1,10 +1,9 @@
 <?php
 require 'bootstrap.php';
-sleep(10);
-// Subscribe to the "hello_world" event.
-prggmr::listen('hello_world', function(){
-   echo 'Hello World!';
+// Subscribe to the "hello world" event.
+prggmr::listen('hello world', function(){
+   echo 'hello world';
 });
 
-// Publish the "hello_world" event.
-prggmr::trigger('hello_world');
+// Publish the "hello world" event.
+prggmr::trigger('hello world');

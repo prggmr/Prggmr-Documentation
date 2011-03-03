@@ -95,7 +95,7 @@ require 'PATH_TO_YOUR_INSTALLATION/prggmr.php';
             </li>
             <li>
                 <p>
-                    Create the "prggmr" directory in your PHP_INCLUDE_PATH.
+                    Create the "Prggmr" directory in your PHP_INCLUDE_PATH.
                 </p>
                 <p>
                     <em>If you are unsure of your PHP_INCLUDE_PATH you may run the following code in a php file to retrieve it</em>
@@ -105,14 +105,26 @@ echo get_include_path();
                 </pre>
             </li>
             <li>
-                Extract the "lib" folder contents into the "prggmr" directory
+                <p>
+                    Extract the entire copy of Prggmr into the "Prggmr" directory, e.g..
+                </p>
+                <pre class="prettyprint">
+/usr/local/lib/php/Prggmr
+    |- lib
+        |- util
+        |- event.php
+        |- listenable.php
+        |- prggmr.php
+    |- README
+    |- etc..etc..
+                </pre>
             </li>
             <li>
                 <p>
                     Test your installation.
                 </p>
                 <pre class="prettyprint">
-require 'prggmr\prggmr.php';
+require 'Prggmr/lib/prggmr.php';
 
 \prggmr::initialize();
                 </pre>
@@ -159,7 +171,7 @@ sudo git clone https://nwhitingx@github.com/nwhitingx/Prggmr.git
                     Test your installation.
                 </p>
                 <pre class="prettyprint">
-require 'Prggmr\lib\prggmr.php';
+require 'Prggmr/lib/prggmr.php';
 
 \prggmr::initialize();
                 </pre>
