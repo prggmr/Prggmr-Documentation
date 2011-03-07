@@ -20,7 +20,7 @@ Your First Prggmr Event!
 </p>
 <p>
     If you have not yet downloaded and installed the Prggmr Framework it is recommended you do so now, you may follow this
-    <a href="pages/download_install.html" rel="guide">link</a> for links and instructions.
+    <a href="/download_install" rel="guide">link</a> for links and instructions.
 </p>
 <h2>
     hello world
@@ -39,9 +39,9 @@ prggmr::trigger('hello world');
     <a href="#" onclick="loadExample('hello world', 'examples/hello_events.php'); return false;">Run this example!</a>
 </p>
 <p>
-    Simple isnt it :) once you've satisified your hello world geekness you can move on to the <a href="pages/api_introduction.html" rel="guide">API Introduction</a>.
+    Simple isnt it :) once you've satisified your hello world geekness you can move on to the <a href="/api_introduction" rel="guide">API Introduction</a>.
 </p>
-<!--<h2>
+<h2>
     Breaking down the code!
 </h2>
 <p>
@@ -51,10 +51,10 @@ prggmr::trigger('hello world');
     In the first example we made use of two of Prggmr's available publishing and subscribing methods, trigger and listen.
 </p>
 <div class="method">
-    <a href="pages/api/prggmr.html" rel="guide">prggmr</a>::<a href="pages/api/prggmr/listen.html" rel="guide">listen</a>(<em>$event, \Closure $function [, array $options = array()]</em>)
+    <a href="/api/prggmr.html" rel="guide">prggmr</a>::<a href="pages/api/prggmr/listen" rel="guide">listen</a>(<em>$event, \Closure $function [, array $options = array()]</em>)
     <p>
         Statically called global subscriber, registers a new event to be bubbled when a notice is received from the event engine. You may read more about the prggmr::listen method on the following
-        <a href="pages/api/prggmr/listen.html" rel="guide">page</a>.
+        <a href="/api/prggmr/listen" rel="guide">page</a>.
     </p>
     <ul>
         <li>
@@ -105,12 +105,12 @@ prggmr::trigger('hello world');
     prggmr::trigger(<em>$event [, array $params = array(), array $options = array()]</em>)
     <p>
         Globally available publisher, pushes events to the event engine bubbling any subscribers. You may read more about the prggmr::trigger method on the following
-        <a href="pages/api/prggmr/trigger.html" rel="guide">page</a>.
+        <a href="/api/prggmr/trigger" rel="guide">page</a>.
     </p>
     <ul>
         <li>
             <div class="element">$event <span>string | object</span></div>
-            Name of the event to publish or an instance of \prggmr::<a href="pages/api/prggmr/event.html">Event</a> object.
+            Name of the event to publish or an instance of \prggmr::<a href="/api/prggmr/event">Event</a> object.
         </li>
         <li>
             <div class="element">$params <span>array</span></div>
@@ -152,7 +152,7 @@ prggmr::trigger('hello world');
             </ul>
         </li>
     </ul>
-</div>-->
+</div>
 <p>
 
 </p>
