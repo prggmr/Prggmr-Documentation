@@ -111,6 +111,27 @@
                 });
                 return false;
             });
+
+            $('ul[rel="sub-nav"]').each(function(){
+                $(this).attr('ele-height', $(this).height());
+            });
+
+            $('h5').each(function(){
+                $(this).click(function(){
+                    $('ul[rel="sub-nav"]').each(function(){
+                        $(this).stop();
+                        $(this).fadeOut();
+                    });
+                    if ($(this).attr('active') == 'true') {
+                        $('ul#'+$(this).attr('rel')).fadeOut();
+                        $(this).attr('active', 'false');
+                    } else {
+                        $('ul#'+$(this).attr('rel')).fadeIn();
+                        $(this).attr('active', 'true');
+                    }
+                });
+            });
+
             var nav = $('div#right');
             //$(window).scroll(function(){
             //        nav.stop();
@@ -203,7 +224,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/publishing_listeable" rel="guide">
+                        <a href="/publishing_listenable" rel="guide">
                             Listenable Object
                         </a>
                     </li>
@@ -233,14 +254,138 @@
                         </h4>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
-                            prggmr::listen
-                        </a>
+                        <h5 rel="prggmr-class">
+                            Prggmr Class
+                        </h5>
+                        <ul id="prggmr-class" rel="subnav">
+                            <li>
+                                <a href="/prggmr" rel="guide">
+                                    prggmr
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/initialize" rel="guide">
+                                   initialize
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr_version" rel="guide">
+                                   version
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/library" rel="guide">
+                                   library
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/load" rel="guide">
+                                   load
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/listen" rel="guide">
+                                   listen
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/haslistener" rel="guide">
+                                   hasListener
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr_trigger" rel="guide">
+                                    trigger
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/debug" rel="guide">
+                                    debug
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/registry" rel="guide">
+                                    registry
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/analyze" rel="guide">
+                                    analyze
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/prggmr/__callStatic" rel="guide">
+                                    __callStatic
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
-                            prggmr::trigger
-                        </a>
+                        <h5 rel="event-class">
+                            Event Class
+                        </h5>
+                        <ul id="event-class" rel="subnav">
+                            <li>
+                                <a href="/event/__construct" rel="guide">
+                                    __construct
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/constants" rel="guide">
+                                   CONSTANTS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/setState" rel="guide">
+                                   setState
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/getStateMessage" rel="guide">
+                                   getStateMessage
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/getState" rel="guide">
+                                   getState
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/haltSequence" rel="guide">
+                                   haltSequence
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/isHalted" rel="guide">
+                                   isHalted
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/getResults" rel="guide">
+                                   getResults
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/isResultsStackable" rel="guide">
+                                   isResultsStackable
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/setResultsStackable" rel="guide">
+                                   setResultsStackable
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/setResults" rel="guide">
+                                   setResults
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/event/getListener" rel="guide">
+                                   getListener
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <h3>

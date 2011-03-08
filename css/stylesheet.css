@@ -150,8 +150,9 @@ div#left ul li h3 {
 
 div#right ul li {
     padding: 5px 0px;
-    margin: 0 10px;
+    margin: 0 0px;
 }
+
 
 div#right ul li h3 {
     font-size: 13px;
@@ -160,12 +161,35 @@ div#right ul li h3 {
     padding-bottom: 5px;
 }
 
+div#right ul li h5 {
+    /*margin-left: 0px;*/
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    padding: 0px 0px 5px;
+    border-bottom: 1px solid #A0A0A0;
+    margin-left: 10px;
+}
+
+div#right ul li ul {
+    margin: 5px 10px;
+    display: none;
+}
+
+div#right ul li ul li a {
+    /*border-bottom: 1px dashed #333;*/
+    font-weight: bold;
+    font-size: 13px;
+}
+
 div#right ul li a {
-    width: 95%;
+    width: 100%;
     display: block;
     font-weight: normal;
     font-size: 12px;
-    margin-left: 10px;
+    font-style: normal;
+    margin-left: 5px;
 }
 
 div#left p, #example-body p { line-height: 19px; }
@@ -280,3 +304,5 @@ div.method span.default {
     display: block;
     color: #566169;
 }
+/**/
+/*#dsq-content .dsq-avatar img { border: 1px dashed #333 !important; padding: 3px !important; margin: 5px !important; }*/
