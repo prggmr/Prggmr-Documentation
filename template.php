@@ -126,6 +126,7 @@
     </script>
 </head>
 <body onload="prettyPrint();">
+    <a href="http://github.com/nwhitingx/Prggmr"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999;" src="https://assets2.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_darkblue_121621.png&path=" alt="Fork me on GitHub"></a>
     <div id="example-background">
     </div>
     <div id="example-body">
@@ -197,22 +198,17 @@
                         </h4>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
-                            Publishing Introduction
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/api_introduction" rel="guide">
+                        <a href="/globally_publishing" rel="guide">
                             Globally Publishing
                         </a>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
+                        <a href="/publishing_listeable" rel="guide">
                             Listenable Object
                         </a>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
+                        <a href="/publishing_event" rel="guide">
                             Event Object
                         </a>
                     </li>
@@ -222,23 +218,18 @@
                         </h4>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
-                            Subscription Introduction
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/api_introduction" rel="guide">
+                        <a href="/globally_subscribing" rel="guide">
                             Globally Subscribing
                         </a>
                     </li>
                     <li>
-                        <a href="/api_introduction" rel="guide">
+                        <a href="/subscribing_event" rel="guide">
                             Event Object
                         </a>
                     </li>
                     <li>
                         <h4>
-                            Event
+                            Prggmr API
                         </h4>
                     </li>
                     <li>
