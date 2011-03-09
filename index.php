@@ -3,6 +3,12 @@ set_include_path(getcwd() . DIRECTORY_SEPARATOR . get_include_path());
 require 'lib/prggmr.php';
 \prggmr::initialize();
 
+define('WEB_URL', 'http://prggmr-docs');
+
+function plink($uri) {
+    return WEB_URL.$uri;
+}
+
 \prggmr::listen('dispatch', function($request){
     $uri = 'pages'.$request->uri.'.html';
     $found = false;

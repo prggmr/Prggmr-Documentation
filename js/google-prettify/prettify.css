@@ -1,5 +1,5 @@
 /*/* Pretty printing styles. Used with prettify.js. */*/
-/**/
+
 /*.str { color: #868e7d; font-weight: bold; }*/
 /*.kwd { color: #7490aa;  font-weight: bold;}*/
 /*.com { color: #565D60;  font-weight: bold;}*/
@@ -75,27 +75,26 @@
 /* Put a border around prettyprinted code snippets. */
 pre.prettyprint { background-color:#FAFAFA;
 border:1px solid #CCCCCC;
-line-height: 15px;
-margin:0 0 1em 1em;
+line-height: 15px !important;
+margin:0 0 1em 1em  !important;
 overflow:auto;
-padding:10px;
-font-size: 13px;
-font-family: monospace; }
+padding:10px  !important;
+font-size: 12px  !important;
+font-family: monospace  !important; }
 
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0; list-style: decimal; } /* IE indents via margin-left */
+ol.linenums { margin-top: 0; margin-bottom: 0; list-style: none; } /* IE indents via margin-left */
 li.L0,
 li.L1,
 li.L2,
-li.L3,
+li.L4,
 li.L5,
 li.L6,
 li.L7,
-li.L8 { /*list-style-type: none*/ line-height: 14px; }
+li.L8 { /*list-style-type: none*/ line-height: 14px; margin:  2px 0px  !important; font-size: 12px !important; }
 /* Alternate shading for lines */
 li.L1,
 li.L3,
 li.L5,
 li.L7,
-li.L9 { /*background: #eee*/ line-height: 14px; }
-
+li.L9 { /*background: #eee*/ line-height: 14px; margin: 2px 0px !important; font-size: 12px !important; }

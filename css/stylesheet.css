@@ -79,7 +79,6 @@ section#content p, #example-body p, #content ul li {
     /*color: #fff;*/
     line-height: 15px;
     /*text-align: center;*/
-    font-family: Arial, sans-serif;
 }
 
 
@@ -168,7 +167,7 @@ div#right ul li h5 {
     font-style: italic;
     cursor: pointer;
     padding: 0px 0px 5px;
-    border-bottom: 1px solid #A0A0A0;
+    /*border-bottom: 1px solid #A0A0A0;*/
     margin-left: 10px;
 }
 
@@ -177,9 +176,13 @@ div#right ul li ul {
     display: none;
 }
 
+div#right ul li ul li {
+    border-bottom: 1px dashed #DBDBDB;
+}
+
 div#right ul li ul li a {
     /*border-bottom: 1px dashed #333;*/
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 13px;
 }
 
@@ -304,5 +307,9 @@ div.method span.default {
     display: block;
     color: #566169;
 }
+
+.red { color: #CC5555; }
+.blue { color: #557DCC; }
+.green { color: #55CC7B; }
 /**/
 /*#dsq-content .dsq-avatar img { border: 1px dashed #333 !important; padding: 3px !important; margin: 5px !important; }*/
