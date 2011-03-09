@@ -10,7 +10,7 @@ function plink($uri) {
 }
 
 \prggmr::listen('dispatch', function($request){
-    $uri = 'pages'.$request->uri.'.html';
+    $uri = 'pages'.$request->uri.'.php';
     $found = false;
     foreach (glob('pages/*') as $_file) {
         if ($_file == $uri) {
@@ -22,7 +22,7 @@ function plink($uri) {
     }
     if ($found === false) {
         ob_start();
-            include ('pages/'.$request->defaultpage.'.html');
+            include ('pages/'.$request->defaultpage.'.php');
         $page_contents = ob_get_clean();
     }
     ob_start();

@@ -94,7 +94,7 @@
     <div id="example-body">
     </div>
     <div id="body">
-        <!--<section id="logo">
+        <section id="logo">
             <aside>
                 0110
             </aside>
@@ -107,7 +107,7 @@
             <p>
                 A PHP 5.3 Event Framework developed by Nickolas Whiting
             </p>
-        </section>-->
+        </section>
         <section id="content">
             <div class="clear"></div>
             <div id="right">

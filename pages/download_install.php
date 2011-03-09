@@ -32,7 +32,7 @@
            The blazing nightly build is available to those daring enough to use it.
         </p>
         <p>
-            <strong>Select Format :</strong> <a href="https://github.com/nwhitingx/Prggmr/zipball/master">Zip</a> | <a href="https://github.com/nwhitingx/Prggmr/tarball/master">Tarball</a>
+            <strong>Select Format :</strong> <a href="https://github.com/nwhitingx/Prggmr/zipball/dev">Zip</a> | <a href="https://github.com/nwhitingx/Prggmr/tarball/dev">Tarball</a>
         </p>
     </li>
     <li>
