@@ -2,7 +2,7 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'prggmr'; // required: replace example with your forum shortname
-    var disqus_developer = 1;
+    var disqus_developer = 0;
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = '<?=$request->uri?>';
     //var disqus_url = 'http://prggmr.com/index';

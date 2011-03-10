@@ -501,3 +501,48 @@ class User extends \iconsole\Console
         </pre>
     </li>
 </ul>
+<h2>
+    The console file
+</h2>
+<p>
+    The console file acts as our bootstrap loading the Prggmr framework, modules and events and also serves as the entry point to the console.
+</p>
+<pre class="prettyprint linenums">
+#!/usr/bin/php
+
+/**
+ * Iconsole Prggmr Interactive Console
+ *
+ * @author Nickolas Whiting
+ * @date February 17th, 2011
+ */
+
+// Load the Prggmr Framework
+set_include_path(getcwd() . DIRECTORY_SEPARATOR . get_include_path());
+require 'lib/Prggmr/lib/prggmr.php';
+\prggmr::initialize();
+
+define('LINE_BREAK', "\n");
+
+// Load our modules
+require 'modules/console.php';
+require 'modules/user.php';
+require 'modules/commands.php';
+
+// Run as glob and include as event files
+foreach (glob("events/*.php") as $filename) {
+    require $filename;
+}
+
+// Init the user object
+$user = new \iconsole\User();
+// Dispatch the console
+$commands = new \iconsole\Commands($user);
+</pre>
+<h2>
+    Overview
+</h2>
+<p>
+    Prggmr iConsole is a example app built to demonstrate the possibilities of the Prggmr Framework, it really serves no real world purpose ... well until
+    it is further developed, I hope you enjoyed this guide and if you have comments or suggestions post them below :)
+</p>

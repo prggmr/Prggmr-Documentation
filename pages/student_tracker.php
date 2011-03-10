@@ -1,5 +1,5 @@
 <h2>
-    The Student Tracker - <span class="blue">Intermediate</span>
+    The Student Tracker - <span class="green">Beginner</span>
 </h2>
 <p>
     The code below represents a student tracking object which records the time a student arrives to class,

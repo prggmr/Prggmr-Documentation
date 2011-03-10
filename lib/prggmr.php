@@ -58,7 +58,7 @@ if (!defined('PRGGMR_LIBRARY_PATH')) {
     define('PRGGMR_LIBRARY_PATH', dirname(__DIR__));
 }
 
-define('PRGGMR_VERSION', '0.1.0beta');
+define('PRGGMR_VERSION', '0.0.1b');
 
 require 'util/datastatic.php';
 require 'util/datainstance.php';

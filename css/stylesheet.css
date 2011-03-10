@@ -313,3 +313,20 @@ div.method span.default {
 .green { color: #55CC7B; }
 /**/
 /*#dsq-content .dsq-avatar img { border: 1px dashed #333 !important; padding: 3px !important; margin: 5px !important; }*/
+
+h2 span {
+    font-size: 13px;
+    /*border-bottom: 1px solid #888;*/
+    clear: both;
+    color: #CC5555;
+    font-style: italic;
+    clear: both;
+    display: block;
+    /*padding: 10px 0;*/
+    /*line-height: 25px;*/
+}
+
+div#left ul.class-overview {
+    list-style: disc;
+    margin: 10px 0 25px;
+}
