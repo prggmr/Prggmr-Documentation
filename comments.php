@@ -5,7 +5,7 @@
     var disqus_developer = 0;
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = '<?=$request->uri?>';
-    //var disqus_url = 'http://prggmr.com/index';
+    var disqus_url = '<?=WEB_URL.$request->uri?>';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

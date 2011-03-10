@@ -398,7 +398,7 @@ class User extends \iconsole\Console
         <p>
             The user events file adds subscriptions for all user related events such as logins.
         </p>
-        <pre class="prettyprint linenums">
+        <pre class="prettyprint linenums lang-php">
 /**
  * Subscription which handles the logging in of a user, this is done
  * outside of the iconsole\User object as we only prompt the user
@@ -507,7 +507,7 @@ class User extends \iconsole\Console
 <p>
     The console file acts as our bootstrap loading the Prggmr framework, modules and events and also serves as the entry point to the console.
 </p>
-<pre class="prettyprint linenums">
+<pre class="prettyprint linenums lang-php">
 #!/usr/bin/php
 
 /**

@@ -289,16 +289,15 @@ div.method ul li div.element span {
     line-height: inherit;
 }
 
-div.method ul li
-
 .note {
     /*background: #D1BABA;*/
-    border: 1px dashed #CC6363;
-    background: #EDCBCB;
+    border: 1px dashed #B9BA8B;
+    background: #F4F2D2;
     padding: 10px;
     margin: 10px 0;
-    font-style: italic;
-    font-weight: bold;
+    /*font-style: italic;*/
+    /*font-weight: bold;*/
+    font-size: 13px;
 }
 
 div.method span.default {

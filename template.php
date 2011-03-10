@@ -85,7 +85,7 @@
         });
 
     </script>
-    <link href="/js/google-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="/js/google-prettify/prettify-default.css" type="text/css" rel="stylesheet" />
 </head>
 <body onload="prettyPrint();">
     <a href="http://github.com/nwhitingx/Prggmr"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999;" src="https://assets2.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_darkblue_121621.png&path=" alt="Fork me on GitHub"></a>
